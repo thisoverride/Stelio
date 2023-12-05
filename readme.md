@@ -1,4 +1,4 @@
-# AWS S3 Event Service
+# Stelio
 
 This AWS S3 Event Service is a TypeScript-based module designed to process CSV files from an S3 bucket, convert them to JSON, and store the resulting data back into an S3 bucket.
 
