@@ -5,17 +5,6 @@
   "license": "MIT",
   "author": "thisoverride",
   "description": "",
-  "keywords": [
-    "AWS",
-    "S3",
-    "CSV",
-    "JSON",
-    "serverless",
-    "TypeScript",
-    "data-processing",
-    "event-driven-architecture",
-    "Node.js"
-  ],
   "scripts": {
     "build": "yarn install --production  --modules-folder ./build/node_modules && tsc",
     "dev": "ts-node-dev ./src/tests/main.test.ts",

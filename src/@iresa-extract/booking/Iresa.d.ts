@@ -1,38 +1,6 @@
 /**
- * Represents the Booking interface, defining the structure of a booking object.
+ * Represents the GroupementParams interface, defining the structure of a GroupementParams object.
  */
-export interface Booking {
-  /**
-   * The unique identifier for the booking.
-   * @type {string}
-   */
-  id: string;
-
-  /**
-   * The partition key for the booking.
-   * @type {string}
-   */
-  pk: string;
-
-  /**
-   * The sort key for the booking.
-   * @type {string}
-   */
-  sk: string;
-
-  /**
-   * The number of reservations associated with the booking.
-   * @type {string}
-   */
-  no_reservations: number;
-
-  /**
-   * The number of booking options available for the booking.
-   * @type {string}
-   */
-  no_options: number;
-}
-
 export interface GroupementParams {
   /**
    *
@@ -99,20 +67,25 @@ export interface GroupementParams {
   s3Event: any;
 }
 
+/**
+ * Represents data to be sent to an S3 bucket.
+ * @interface StelioData
+ */
 export interface StelioData {
   /**
    *
-   * Name of file
+* The name of the file.
    * @type {string}
-   * @memberof GroupementParams
+   * @memberof StelioData
    */
+  
   name: string;
 
   /**
    *
-   * Data to push in body s3bucket
+   * The data to be uploaded to the body of the S3 bucket.
    * @type {string}
-   * @memberof GroupementParams
+   * @memberof StelioData
    */
   body: string;
 }

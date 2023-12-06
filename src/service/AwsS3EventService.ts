@@ -68,17 +68,6 @@ export default class S3EventService implements IS3EventService {
       };
 
       await this.putFileToS3Bucket(stelioData);
-
-      // const filePath: string = `./output/${fileName}.${this.params.format}`;
-      // const jsonPackage: string = JSON.stringify(groupedPackage);
-
-      // fs.writeFile(filePath, jsonPackage + '\n', { flag: 'a' }, (err) => {
-      //   if (err) {
-      //     console.error('Erreur lors de l\'écriture du fichier :', err);
-      //   } else {
-      //     // console.log(`sur ${Object.keys(newJsonData).length} éléments`);
-      //   }
-      // });
     }
   }
 
@@ -92,7 +81,7 @@ export default class S3EventService implements IS3EventService {
   }
 
   private notEmptyParams (params: GroupementParams): void {
-    if (!this.params?.region || !this.params?.separator || !this.params?.groupementKey || !this.params?.format) {
+    if (!this.params?.region || !this.params?.separator || !this.params?.groupementKey || !this.params?.format || !this.params.destination) {
       throw new Error(`Invalid Param ${JSON.stringify(params)} Some required parameters are missing.`);
     }
   }
